@@ -1,0 +1,4 @@
+var_prompt:
+  - name: "user_os"
+    prompt: "Select OS"
+    private: no

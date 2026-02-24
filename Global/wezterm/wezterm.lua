@@ -13,15 +13,17 @@ config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 
 if is_macos or true then
 	config.keys = {
+		-- Option+Up
 		{
-			key = "LeftArrow",
-			mods = "CMD",
-			action = wezterm.action.SendString("\x1bb"),
+			key = "UpArrow",
+			mods = "OPT",
+			action = wezterm.action.SendString("\x1b[A"),
 		},
+		-- Option+Down
 		{
-			key = "RightArrow",
-			mods = "CMD",
-			action = wezterm.action.SendString("\x1bf"),
+			key = "DownArrow",
+			mods = "OPT",
+			action = wezterm.action.SendString("\x1b[B"),
 		},
 		-- Option+Left
 		{

@@ -5,8 +5,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="$HOME/.jenv/bin:$PATH"
+# JAVA HOME
+#export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+#export JAVA_HOME=$(/usr/libexec/java_home -v 25)
+
+# virt-manager
+#export LIBVIRT_DEFAULT_URI="qemu:///session"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -86,6 +91,12 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Aliases
+alias ls='eza --icons=always'
+alias ll='eza -l --icons=always'
+alias la='eza -la --icons=always'
+alias lsa='eza -la --icons=always'
+alias dir='eza -l --icons=always'
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

@@ -10,7 +10,7 @@ function scheme_for_appearance(appearance)
 	end
 end
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
-
+-- config.font = wezterm.font("JetBrains Mono Nerd")
 if is_macos or true then
 	config.keys = {
 		-- Option+Up

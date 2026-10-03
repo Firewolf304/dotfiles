@@ -1,6 +1,6 @@
 [submodule "fedora42_wsl"]
 	path = fedora42_wsl
-	url = ./fedora42_wsl
+	url = ../fedora42_wsl
 	branch = fedora42_wsl
 [submodule "windows11_notebook_26100.1.amd64fre.ge_release.240331-1435"]
   path = windows11_notebook_26100.1.amd64fre.ge_release.240331-1435

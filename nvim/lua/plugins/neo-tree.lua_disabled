@@ -1,0 +1,16 @@
+return {
+  "nvim-neo-tree/neo-tree.nvim",
+  opts = {
+    filesystem = {
+      filtered_items = {
+        visible = false, -- скрыть отфильтрованные файлы
+        hide_dotfiles = false, -- скрыть дотфайлы
+        hide_gitignored = false, -- скрыть файлы gitignore
+        hide_hidden = false,
+        hide_by_name = {
+          ".git",
+        },
+      },
+    },
+  },
+}

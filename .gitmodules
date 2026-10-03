@@ -7,6 +7,6 @@
   url = ../dotfiles.git
   branch = windows11_notebook_26100.1.amd64fre.ge_release.240331-1435
 [submodule "macos"]
-	path = macos
-	url = ./macos
-	branch = macos
+  path = macos
+  url = ../dotfiles.git
+  branch = macos

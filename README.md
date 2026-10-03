@@ -1,5 +1,0 @@
-# dotfiles
-
-
-my retard setup
-

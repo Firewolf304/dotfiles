@@ -1,6 +1,9 @@
-[submodule "MacOS/zsh/.oh-my-zsh"]
-	path = MacOS/zsh/.oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
-[submodule "Linux/wsl/fedora42/zsh/.oh-my-zsh"]
-	path = Linux/wsl/fedora42/zsh/.oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "fedora42_wsl"]
+	path = fedora42_wsl
+	url = https://github.com/Firewolf304/dotfiles/tree/fedora42_wsl
+[submodule "windows11_notebook_26100.1.amd64fre.ge_release.240331-1435"]
+	path = windows11_notebook_26100.1.amd64fre.ge_release.240331-1435
+  url = https://github.com/Firewolf304/dotfiles/tree/windows11_notebook_26100.1.amd64fre.ge_release.240331-1435
+[submodule "macos"]
+  path macos
+  url = https://github.com/Firewolf304/dotfiles/tree/macos

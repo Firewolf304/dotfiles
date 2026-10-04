@@ -14,3 +14,7 @@
 	path = pve_product
 	url = ../dotfiles.git
 	branch = pve_product
+[submodule "fedora42_hyperv"]
+	path = fedora42_hyperv
+	url = ../dotfiles.git
+	branch = fedora42_hyperv

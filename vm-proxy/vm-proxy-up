@@ -1,0 +1,21 @@
+#!/bin/sh
+set -eu
+
+PROXY_IF="eth1"
+PROXY_HOST="10.0.250.1"
+PROXY_SOURCE="10.0.250.2"
+TUN_IF="tun0"
+
+ip tuntap add mode tun dev "$TUN_IF" 2>/dev/null || true
+ip address replace 198.18.0.1/15 dev "$TUN_IF"
+ip link set "$TUN_IF" up
+
+# SOCKS-сервер должен всегда достигаться напрямую через eth1,
+# иначе получится маршрутный цикл:
+# tun0 -> SOCKS -> tun0 -> SOCKS...
+ip route replace "$PROXY_HOST/32" \
+    dev "$PROXY_IF" \
+    src "$PROXY_SOURCE"
+
+# Весь остальной IPv4-трафик отправляется в TUN.
+ip route replace default dev "$TUN_IF" metric 1

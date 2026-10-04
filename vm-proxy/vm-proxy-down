@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ip route del default dev tun0 2>/dev/null || true
+ip link delete tun0 2>/dev/null || true

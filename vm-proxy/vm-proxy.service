@@ -1,0 +1,24 @@
+[Unit]
+Description=Route VM traffic through host SOCKS5
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStartPre=/usr/local/sbin/vm-proxy-up
+
+ExecStart=/usr/local/bin/tun2socks --device tun://tun0 --proxy socks5://10.0.250.1:2081 --loglevel info
+
+ExecStartPost=/usr/bin/resolvectl dns tun0 1.1.1.1#cloudflare-dns.com 1.0.0.1#cloudflare-dns.com
+ExecStartPost=/usr/bin/resolvectl domain tun0 ~.
+ExecStartPost=/usr/bin/resolvectl default-route tun0 yes
+ExecStartPost=/usr/bin/resolvectl dnsovertls tun0 yes
+
+ExecStopPost=-/usr/bin/resolvectl revert tun0
+ExecStopPost=/usr/local/sbin/vm-proxy-down
+
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

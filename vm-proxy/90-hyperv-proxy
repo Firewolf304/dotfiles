@@ -1,0 +1,18 @@
+#!/bin/sh
+
+INTERFACE="$1"
+ACTION="$2"
+
+[ "$INTERFACE" = "eth1" ] || exit 0
+
+case "$ACTION" in
+    up|dhcp4-change)
+        systemctl start --no-block vm-proxy.service
+        ;;
+
+    down|pre-down)
+        systemctl stop --no-block vm-proxy.service
+        ;;
+esac
+
+exit 0

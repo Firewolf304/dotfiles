@@ -10,3 +10,7 @@
   path = macos
   url = ../dotfiles.git
   branch = macos
+[submodule "pve_product"]
+	path = pve_product
+	url = ../dotfiles.git
+	branch = pve_product

@@ -18,3 +18,7 @@
 	path = fedora42_hyperv
 	url = ../dotfiles.git
 	branch = fedora42_hyperv
+[submodule "fedora42_secured"]
+	path = fedora42_secured
+	url = ../dotfiles
+	branch = fedora42_secured

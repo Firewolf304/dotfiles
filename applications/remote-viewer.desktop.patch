@@ -1,0 +1,11 @@
+--- remote-viewer.desktop_delete	2026-10-13 16:08:37.935896939 +0700
++++ remote-viewer.desktop	2026-10-13 16:07:57.273939487 +0700
+@@ -65,7 +65,7 @@
+ Comment[id]=Akses desktop jauh
+ Comment[fi]=Käytä etätyöpöytiä
+ Comment=Access remote desktops
+-Exec=remote-viewer %u
++Exec=env GDK_BACKEND=x11 remote-viewer %u
+ Type=Application
+ Terminal=false
+ MimeType=x-scheme-handler/spice;x-scheme-handler/spice+unix;x-scheme-handler/spice+tls;application/x-virt-viewer;
